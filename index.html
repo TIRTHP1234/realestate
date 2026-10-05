@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elara Residence — A Marlow Development</title>
+<meta name="description" content="Elara Residence, Waterline District, Dubai — a curated residential launch by Marlow Properties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Jost:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preload" as="image" href="assets/image/The Arrival.png">
+<link rel="preload" as="image" href="assets/image/Courtyard Calm.png">
+<link rel="preload" as="image" href="assets/image/The Greener Space.png">
+<link rel="preload" as="image" href="assets/image/Something Meaningful.png">
+</head>
+<body class="is-preloading">
+
+<!-- PRELOADER — shown until every image on the page has loaded (or a 6s
+     safety timeout), then fades out. The arch echoes the motif already
+     used across the site (Grounds, Family, Elevation); the fill rises
+     with actual load progress rather than a decorative fixed timer. -->
+<div class="preloader" id="preloader">
+  <div class="preloader-top">
+    <span class="preloader-brand">MARLOW PROPERTIES</span>
+    <span class="preloader-pct" id="preloaderPct">0%</span>
+  </div>
+  <svg class="preloader-arch" viewBox="0 0 120 170" aria-hidden="true">
+    <clipPath id="preloaderArchClip">
+      <path d="M6 162 V64 A54 54 0 0 1 114 64 V162 Z"/>
+    </clipPath>
+    <rect class="preloader-arch-fill" id="preloaderArchFill" x="6" y="162" width="108" height="0" clip-path="url(#preloaderArchClip)"></rect>
+    <path class="preloader-arch-outline" d="M6 162 V64 A54 54 0 0 1 114 64 V162"></path>
+    <line class="preloader-arch-base" x1="-30" y1="162" x2="150" y2="162"></line>
+  </svg>
+  <div class="preloader-bottom">
+    <span class="preloader-name">ELARA RESIDENCE</span>
+    <span class="preloader-loc">WATERLINE DISTRICT &middot; DUBAI</span>
+  </div>
+</div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- NAV -->
+<nav class="site-nav" id="siteNav">
+  <a href="#hero" class="brand-mark">ELARA RESIDENCE</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open chapter menu">
+    <span>MENU</span>
+    <i></i>
+  </button>
+</nav>
+
+<div class="chapter-menu" id="chapterMenu">
+  <button class="menu-close" id="menuClose" aria-label="Close menu">CLOSE</button>
+  <ol class="chapter-list">
+    <li><a href="#residence" data-n="01">The Residence</a></li>
+    <li><a href="#collection" data-n="02">The Collection</a></li>
+    <li><a href="#wellness" data-n="03">Wellness</a></li>
+    <li><a href="#stillness" data-n="04">By the Water</a></li>
+    <li><a href="#family" data-n="05">For the Youngest Guests</a></li>
+    <li><a href="#rooftop" data-n="06">The Rooftop</a></li>
+    <li><a href="#scenes" data-n="07">A Walk Through Elara</a></li>
+  </ol>
+</div>
+
+<!-- HERO -->
+<section class="hero-wrap" id="hero">
+  <div class="hero-pin" id="heroPin">
+    <div class="hero-media">
+      <video class="hero-video" id="heroVideo" muted playsinline preload="auto">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-poster" id="heroPoster"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-content" id="heroContent">
+      <span class="hero-label stagger" style="--i:0">A MARLOW DEVELOPMENT</span>
+      <h1 class="hero-title">
+        <span class="stagger" style="--i:1">Elara</span>
+        <span class="stagger" style="--i:2">Residence</span>
+      </h1>
+      <p class="hero-tagline stagger" style="--i:3">Where the city exhales.</p>
+      <div class="hero-meta stagger" style="--i:4">
+        <span>WATERLINE DISTRICT &middot; DUBAI</span>
+      </div>
+      <a href="#residence" class="hero-cta stagger" style="--i:5">
+        <span>Discover the Residence</span>
+      </a>
+    </div>
+
+    <div class="hero-scroll stagger" style="--i:6">
+      <span>SCROLL</span>
+      <div class="scroll-line"><i></i></div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- 01 — RESIDENCE -->
+  <section class="chapter chapter--light" id="residence">
+    <div class="chapter-inner chapter-inner--center">
+      <p class="chapter-eyebrow reveal">CHAPTER 01 &mdash; THE RESIDENCE</p>
+      <h2 class="chapter-title reveal">A quieter kind<br>of skyline living.</h2>
+      <p class="chapter-copy reveal">Forty-two storeys where the city softens into water. Elara Residence
+        is built for the hours that don't need an agenda &mdash; long views, framed light, and rooms
+        that hold their silence well.</p>
+      <div class="stat-row reveal">
+        <div class="stat"><strong>42</strong><span>Storeys</span></div>
+        <div class="stat"><strong>168</strong><span>Residences</span></div>
+        <div class="stat"><strong>4</strong><span>Residence Types</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WALKTHROUGH — heading pinned in place, arches revealed one by one on scroll -->
+  <section class="grounds" id="walkthrough">
+    <div class="arch-pin-wrap" id="archPinWrap">
+      <div class="arch-pin">
+        <div class="grounds-header reveal">
+          <p class="grounds-eyebrow">THE GROUNDS<i></i></p>
+          <span class="grounds-meta">ELARA RESIDENCE &middot; WATERLINE DISTRICT, DUBAI</span>
+        </div>
+        <h2 class="grounds-title reveal">
+          <span>Wander the grounds</span>
+          <em>before the door opens.</em>
+        </h2>
+        <p class="grounds-subtitle reveal">The approach, the courtyard, the garden beyond.</p>
+
+        <div class="arch-row">
+          <div class="arch-item" data-arch-index="0">
+            <div class="arch-frame"><img src="assets/image/The Arrival.png" alt="Villa exterior and arrival courtyard"></div>
+            <div class="arch-caption">
+              <span class="arch-caption-num">01</span>
+              <h3 class="arch-caption-title">The Arrival</h3>
+              <a href="#interiors" class="arch-caption-cta">STEP OUTSIDE <b>&#8594;</b></a>
+            </div>
+          </div>
+          <div class="arch-item" data-arch-index="1">
+            <div class="arch-frame"><img src="assets/image/Courtyard Calm.png" alt="Courtyard garden with flowering borders"></div>
+            <div class="arch-caption">
+              <span class="arch-caption-num">02</span>
+              <h3 class="arch-caption-title">Courtyard Calm</h3>
+              <a href="#interiors" class="arch-caption-cta">WALK THE COURTYARD <b>&#8594;</b></a>
+            </div>
+          </div>
+          <div class="arch-item" data-arch-index="2">
+            <div class="arch-frame"><img src="assets/image/The Greener Space.png" alt="Open lawn and gravel path"></div>
+            <div class="arch-caption">
+              <span class="arch-caption-num">03</span>
+              <h3 class="arch-caption-title">The Greener Space</h3>
+              <a href="#interiors" class="arch-caption-cta">SEE THE GROUNDS <b>&#8594;</b></a>
+            </div>
+          </div>
+          <div class="arch-item" data-arch-index="3">
+            <div class="arch-frame"><img src="assets/image/Something Meaningful.png" alt="Garden path through tropical planting"></div>
+            <div class="arch-caption">
+              <span class="arch-caption-num">04</span>
+              <h3 class="arch-caption-title">Something Meaningful</h3>
+              <a href="#interiors" class="arch-caption-cta">FOLLOW THE PATH <b>&#8594;</b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — THE COLLECTION — pinned image + full scrolling amenities list -->
+  <section class="chapter chapter--light" id="collection" style="padding:0;">
+    <div class="ways-pin-wrap" id="waysPinWrap">
+      <div class="ways-pin">
+        <div class="ways-topbar">
+          <p class="ways-tag"><span>02</span><i></i>THE COLLECTION</p>
+          <div class="ways-utility">
+            <button class="ways-chapters-btn" id="waysChaptersBtn" type="button">THE CHAPTERS <i aria-hidden="true"></i></button>
+            <a href="#enquire" class="ways-topbar-link">ENQUIRE <b>&#8599;</b></a>
+          </div>
+        </div>
+
+        <div class="ways-hero">
+          <div class="ways-brand">
+            <span class="ways-brand-name">Elara</span>
+            <span class="ways-brand-caption">RESIDENCE</span>
+          </div>
+          <div class="ways-hero-text">
+            <h2 class="ways-hero-title">
+              <span>Twelve ways</span>
+              <em>to feel at home.</em>
+            </h2>
+            <p class="ways-hero-subtitle">From the pool deck to the private cinema, nothing is more than a lift ride away.</p>
+          </div>
+        </div>
+
+        <div class="ways-layout">
+          <div class="ways-media-col">
+            <span class="ways-index" id="waysIndexLabel">01</span>
+            <div class="ways-media">
+              <img class="ways-img" data-way="0" src="assets/image/Infinity pool.png" alt="Infinity pool">
+              <img class="ways-img" data-way="1" src="assets/image/Wellness Spa.png" alt="Wellness spa">
+              <img class="ways-img" data-way="2" src="assets/image/Residents’ Lounge.png" alt="Residents' lounge">
+              <img class="ways-img" data-way="3" src="assets/image/Private Cinema.png" alt="Private cinema">
+              <img class="ways-img" data-way="4" src="assets/image/Wine Room.png" alt="Wine room">
+              <img class="ways-img" data-way="5" src="assets/image/Co-working Studio.png" alt="Co-working studio">
+              <img class="ways-img" data-way="6" src="assets/image/Guest Suites.png" alt="Guest suites">
+              <img class="ways-img" data-way="7" src="assets/image/24-Hour Concierge.png" alt="24-hour concierge">
+              <img class="ways-img" data-way="8" src="assets/image/Yoga Studio.png" alt="Yoga studio">
+              <img class="ways-img" data-way="9" src="assets/image/Kids’ Garden.png" alt="Kids' garden">
+              <img class="ways-img" data-way="10" src="assets/image/Sky Terrace.png" alt="Sky terrace">
+              <img class="ways-img" data-way="11" src="assets/image/Fitness Studio.png" alt="Fitness studio">
+            </div>
+            <div class="ways-scroll-hint"><span>SCROLL</span><b>&#8595;</b></div>
+          </div>
+
+          <div class="ways-list-wrap">
+            <div class="ways-list" id="waysList">
+              <button class="ways-row" data-way="0">
+                <div class="ways-row-top"><span class="ways-row-num">01</span><h3 class="ways-row-title">Infinity Pool</h3><span class="ways-row-cat">WATER</span></div>
+                <p class="ways-row-desc">An edge that disappears into the skyline.</p>
+              </button>
+              <button class="ways-row" data-way="1">
+                <div class="ways-row-top"><span class="ways-row-num">02</span><h3 class="ways-row-title">Wellness Spa</h3><span class="ways-row-cat">WELLNESS</span></div>
+                <p class="ways-row-desc">Steam, sauna, and quiet, built in.</p>
+              </button>
+              <button class="ways-row" data-way="2">
+                <div class="ways-row-top"><span class="ways-row-num">03</span><h3 class="ways-row-title">Residents&rsquo; Lounge</h3><span class="ways-row-cat">SOCIAL</span></div>
+                <p class="ways-row-desc">A private room for evenings without an occasion.</p>
+              </button>
+              <button class="ways-row" data-way="3">
+                <div class="ways-row-top"><span class="ways-row-num">04</span><h3 class="ways-row-title">Private Cinema</h3><span class="ways-row-cat">LEISURE</span></div>
+                <p class="ways-row-desc">Reserved screenings, whenever you like.</p>
+              </button>
+              <button class="ways-row" data-way="4">
+                <div class="ways-row-top"><span class="ways-row-num">05</span><h3 class="ways-row-title">Wine Room</h3><span class="ways-row-cat">LEISURE</span></div>
+                <p class="ways-row-desc">Temperature-held, resident-only.</p>
+              </button>
+              <button class="ways-row" data-way="5">
+                <div class="ways-row-top"><span class="ways-row-num">06</span><h3 class="ways-row-title">Co-working Studio</h3><span class="ways-row-cat">WORK</span></div>
+                <p class="ways-row-desc">Quiet enough to actually work in.</p>
+              </button>
+              <button class="ways-row" data-way="6">
+                <div class="ways-row-top"><span class="ways-row-num">07</span><h3 class="ways-row-title">Guest Suites</h3><span class="ways-row-cat">HOSPITALITY</span></div>
+                <p class="ways-row-desc">For family that stays a little longer.</p>
+              </button>
+              <button class="ways-row" data-way="7">
+                <div class="ways-row-top"><span class="ways-row-num">08</span><h3 class="ways-row-title">24-Hour Concierge</h3><span class="ways-row-cat">SERVICE</span></div>
+                <p class="ways-row-desc">Arrivals and requests, handled quietly.</p>
+              </button>
+              <button class="ways-row" data-way="8">
+                <div class="ways-row-top"><span class="ways-row-num">09</span><h3 class="ways-row-title">Yoga Studio</h3><span class="ways-row-cat">WELLNESS</span></div>
+                <p class="ways-row-desc">Morning light, floor to ceiling.</p>
+              </button>
+              <button class="ways-row" data-way="9">
+                <div class="ways-row-top"><span class="ways-row-num">10</span><h3 class="ways-row-title">Kids&rsquo; Garden</h3><span class="ways-row-cat">FAMILY</span></div>
+                <p class="ways-row-desc">A green world, sized for smaller people.</p>
+              </button>
+              <button class="ways-row" data-way="10">
+                <div class="ways-row-top"><span class="ways-row-num">11</span><h3 class="ways-row-title">Sky Terrace</h3><span class="ways-row-cat">SOCIAL</span></div>
+                <p class="ways-row-desc">The building&rsquo;s best view, shared.</p>
+              </button>
+              <button class="ways-row" data-way="11">
+                <div class="ways-row-top"><span class="ways-row-num">12</span><h3 class="ways-row-title">Fitness Studio</h3><span class="ways-row-cat">WELLNESS</span></div>
+                <p class="ways-row-desc">Equipped for early starts.</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ways-progress">
+          <span id="waysProgCurrent">01</span><i></i><span>12</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 — WELLNESS & WELLBEING — horizontal scroll-scrubbed filmstrip -->
+  <section class="chapter chapter--light" id="wellness" style="padding:0;">
+    <div class="wellness-pin-wrap" id="wellnessPinWrap">
+      <div class="wellness-pin">
+        <div class="wellness-topbar">
+          <div>
+            <span class="wellness-eyebrow">WELLNESS &amp; WELLBEING</span>
+            <span class="wellness-range">01 &mdash; 05</span>
+          </div>
+          <span class="wellness-collection">THE ELARA COLLECTION</span>
+        </div>
+
+        <div class="wellness-stage" id="wellnessStage">
+          <div class="wellness-track" id="wellnessTrack">
+            <div class="wellness-panel">
+              <div class="wellness-panel-text">
+                <h2 class="wellness-panel-title wellness-panel-title--italic">An unhurried<br>kind of everyday.</h2>
+                <p class="wellness-panel-desc">Spaces for movement.<br>Room for stillness.</p>
+                <span class="wellness-hint">SCROLL TO WANDER <b>&#8594;</b></span>
+              </div>
+              <div class="wellness-frame">
+                <img src="assets/image/An unhurried.png" alt="The Elara wellness floor">
+                <span class="wellness-frame-caption">00 / The Collection</span>
+              </div>
+            </div>
+
+            <div class="wellness-panel">
+              <div class="wellness-panel-text">
+                <h2 class="wellness-panel-title wellness-panel-title--italic">A little<br>movement.</h2>
+                <p class="wellness-panel-desc">A little movement.<br>A moment of stillness.</p>
+                <a href="#collection" class="wellness-collection-link">THE ELARA COLLECTION <b>&#8599;</b></a>
+              </div>
+              <div class="wellness-frame wellness-frame--square">
+                <img src="assets/image/A little movement.png" alt="Yoga and zen space">
+                <span class="wellness-frame-caption">01 / Yoga &amp; Zen</span>
+                <div class="wellness-frame-inset">
+                  <img src="assets/image/The Greener Space.png" alt="A quiet corner of the grounds">
+                </div>
+              </div>
+            </div>
+
+            <div class="wellness-panel wellness-panel--full">
+              <div class="wellness-frame wellness-frame--full">
+                <video class="wellness-zoom" src="assets/hero.mp4" autoplay muted loop playsinline></video>
+                <span class="wellness-frame-caption">02 / The Gym</span>
+                <div class="wellness-overlay-text">
+                  <h2 class="wellness-panel-title wellness-panel-title--italic">Room to<br>move.</h2>
+                  <p class="wellness-panel-desc">Full equipment, quiet focus.<br>No wait for a machine.</p>
+                  <a href="#collection" class="wellness-collection-link">THE ELARA COLLECTION <b>&#8599;</b></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="wellness-panel">
+              <div class="wellness-panel-text">
+                <h2 class="wellness-panel-title wellness-panel-title--italic">Time to<br>exhale.</h2>
+                <p class="wellness-panel-desc">Heat, and silence.<br>Nowhere else to be.</p>
+                <a href="#collection" class="wellness-collection-link">THE ELARA COLLECTION <b>&#8599;</b></a>
+                <div class="wellness-text-inset">
+                  <img src="assets/image/The Arrival.png" alt="A quiet corner of the grounds">
+                </div>
+              </div>
+              <div class="wellness-frame">
+                <img src="assets/image/Time to exhale.png" alt="The steam room">
+                <span class="wellness-cloud wellness-cloud--1"></span>
+                <span class="wellness-cloud wellness-cloud--2"></span>
+                <span class="wellness-cloud wellness-cloud--3"></span>
+                <span class="wellness-frame-caption">03 / The Steam Room</span>
+              </div>
+            </div>
+
+            <div class="wellness-panel">
+              <div class="wellness-panel-text">
+                <h2 class="wellness-panel-title wellness-panel-title--italic">Stone<br>and quiet.</h2>
+                <p class="wellness-panel-desc">Planting, water.<br>Set apart from the noise.</p>
+                <a href="#collection" class="wellness-collection-link">THE ELARA COLLECTION <b>&#8599;</b></a>
+              </div>
+              <div class="wellness-frame wellness-frame--square">
+                <img src="assets/image/Stone and quite.png" alt="Zen garden">
+                <span class="wellness-frame-caption">04 / Zen Garden</span>
+                <div class="wellness-frame-inset">
+                  <img src="assets/image/Courtyard Calm.png" alt="A quiet corner of the grounds">
+                </div>
+              </div>
+            </div>
+
+            <div class="wellness-panel wellness-panel--full">
+              <div class="wellness-frame wellness-frame--full">
+                <img src="assets/image/symply be.png" alt="Pool">
+                <span class="wellness-frame-caption">05 / Pool</span>
+                <div class="wellness-overlay-text">
+                  <h2 class="wellness-panel-title wellness-panel-title--italic">Simply<br>be.</h2>
+                  <p class="wellness-panel-desc">A long, quiet lane.<br>Reserved for slow mornings.</p>
+                  <a href="#collection" class="wellness-collection-link">THE ELARA COLLECTION <b>&#8599;</b></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wellness-footer">
+          <div class="wellness-tabs" id="wellnessTabs">
+            <button class="is-active" data-moment="0"><span>01</span>A Little Movement</button>
+            <button data-moment="1"><span>02</span>Room to Move</button>
+            <button data-moment="2"><span>03</span>Time to Exhale</button>
+            <button data-moment="3"><span>04</span>Stone and Quiet</button>
+            <button data-moment="4"><span>05</span>Simply Be</button>
+          </div>
+          <div class="wellness-progress">
+            <span id="wellnessProgCurrent">01</span><i></i><span>05</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 — BY THE WATER — video inset-to-fullscreen zoom, then a curtain-rise
+       transition into the next chapter. Original pacing/shape, not a copy of
+       any reference site's specific transition. -->
+  <section class="chapter chapter--dark" id="stillness" style="padding:0;">
+    <div class="stillness-wrap" id="stillnessWrap">
+      <div class="stillness-pin">
+        <div class="stillness-topbar" id="stillnessTopbar">
+          <p class="chapter-eyebrow">CHAPTER 04 &mdash; BY THE WATER</p>
+        </div>
+
+        <div class="stillness-video-frame" id="stillnessVideoFrame">
+          <video src="assets/hero.mp4" autoplay muted loop playsinline></video>
+          <div class="stillness-video-scrim"></div>
+          <p class="stillness-video-text" id="stillnessVideoText">Some views are worth<br><em>staying for.</em></p>
+        </div>
+
+        <div class="stillness-next" id="stillnessNext">
+          <div class="stillness-next-media">
+            <img src="assets/image/A longer kind.png" alt="A quiet afternoon by the grounds">
+          </div>
+          <div class="stillness-next-scrim"></div>
+          <div class="stillness-next-content">
+            <p class="stillness-next-label">TAKING YOUR TIME</p>
+            <h2 class="stillness-next-title">A longer kind<br><em>of afternoon.</em></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — FOR THE YOUNGEST GUESTS — arch image + inset photo, multi-layer
+       parallax (several elements drift upward at different rates as the
+       section scrolls through, for a layered "everything is moving" feel) -->
+  <section class="chapter chapter--light chapter--family" id="family">
+    <div class="family-content" id="familyContent">
+      <p class="family-eyebrow"><span>05</span><i></i>A SPACE OF THEIR OWN</p>
+      <h2 class="family-title" id="familyTitle">Small hands.<br><em>Big garden.</em></h2>
+      <p class="family-caption">A patch of green, just for them.</p>
+    </div>
+    <div class="family-media">
+      <div class="family-arch" id="familyArch">
+        <img src="assets/image/The Greener Space.png" alt="A garden play area">
+        <span class="family-arch-caption">05 / The Kids&rsquo; Garden</span>
+      </div>
+      <div class="family-inset" id="familyInset">
+        <img src="assets/image/Courtyard Calm.png" alt="A quiet family moment">
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — THE ROOFTOP — full-bleed photo, gentle scroll-tied zoom + parallax -->
+  <section class="chapter chapter--dark chapter--rooftop" id="rooftop">
+    <div class="rooftop-media" id="rooftopMedia">
+      <img src="assets/image/The city softens.png" alt="A rooftop garden at dusk">
+    </div>
+    <div class="rooftop-scrim"></div>
+    <div class="rooftop-content" id="rooftopContent">
+      <p class="rooftop-eyebrow"><span>06</span><i></i>THE ROOFTOP</p>
+      <h2 class="rooftop-title">The city softens<br><em>by evening.</em></h2>
+    </div>
+  </section>
+
+  <!-- 07 — A WALK THROUGH ELARA — pinned scroll collage of three photographs
+       that draw together as the section scrolls, with a caption that drifts
+       off-center. Own proportions, own diagonal cascade layout, own copy. -->
+  <section class="chapter chapter--dark" id="scenes" style="padding:0;">
+    <div class="scenes-pin-wrap" id="scenesPinWrap">
+      <div class="scenes-pin">
+        <div class="scenes-collage" id="scenesCollage">
+          <figure class="scenes-frame scenes-frame--a" id="scenesFrameA">
+            <img src="assets/image/The Arrival.png" alt="The arrival courtyard">
+          </figure>
+          <figure class="scenes-frame scenes-frame--b" id="scenesFrameB">
+            <img src="assets/image/Courtyard Calm.png" alt="A quiet courtyard">
+          </figure>
+          <figure class="scenes-frame scenes-frame--c" id="scenesFrameC">
+            <img src="assets/image/The Greener Space.png" alt="The open grounds">
+          </figure>
+        </div>
+
+        <div class="scenes-text" id="scenesText">
+          <span class="scenes-label">A WALK THROUGH ELARA</span>
+          <h2 class="scenes-heading">Three ways home<br><em>begins to feel like yours.</em></h2>
+          <p class="scenes-desc">Arrival, courtyard, and grounds — drawing a little closer with every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE DETAILS — normal (non-pinned) section, just above the footer. The
+       photo opens fully on the first stretch of scroll, arriving together
+       with the first fact on the right; the remaining three facts fade up
+       one at a time after that. -->
+  <section class="chapter chapter--light details" id="details" style="padding:0;">
+    <div class="details-inner" id="detailsInner">
+      <div class="details-media">
+        <img src="assets/image/Forty-two levels above the waterline district..png" alt="Elara Residence, exterior detail" id="detailsImg">
+      </div>
+      <div class="details-list">
+        <div class="details-item" data-detail="0">
+          <span class="details-num">01</span>
+          <h3 class="details-stat">42</h3>
+          <p class="details-label">STOREYS</p>
+          <p class="details-copy">Forty-two levels above the waterline district.</p>
+        </div>
+        <div class="details-item" data-detail="1">
+          <span class="details-num">02</span>
+          <h3 class="details-stat">168</h3>
+          <p class="details-label">RESIDENCES</p>
+          <p class="details-copy">No two watching the skyline quite the same way.</p>
+        </div>
+        <div class="details-item" data-detail="2">
+          <span class="details-num">03</span>
+          <h3 class="details-stat">4</h3>
+          <p class="details-label">RESIDENCE TYPES</p>
+          <p class="details-copy">Distinct layouts, each shaped around how you actually live.</p>
+        </div>
+        <div class="details-item" data-detail="3">
+          <span class="details-num">04</span>
+          <h3 class="details-stat">Waterline District</h3>
+          <p class="details-label">LOCATION</p>
+          <p class="details-copy">Dubai, where the city softens into water.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELEVATION — an arch-shaped frame (rounded top, flat bottom, same
+       motif as the arch-frame gallery and Family sections) grows via
+       shrinking inset + border-radius, centered on screen, until it opens
+       out to a full-screen photo; once fully open, a closing line fades up
+       from the bottom. Pinned scroll-scrub, reversible, own composition. -->
+  <section class="chapter chapter--dark" id="elevation" style="padding:0;">
+    <div class="elevation-pin-wrap" id="elevationPinWrap">
+      <div class="elevation-pin">
+        <div class="elevation-media" id="elevationMedia">
+          <img src="assets/image/The Arrival.png" alt="Elara Residence at dusk">
+          <div class="elevation-scrim"></div>
+        </div>
+        <p class="elevation-caption" id="elevationCaption">ELARA</p>
+        <div class="elevation-text" id="elevationText">
+          <h2 class="elevation-heading">Come closer.<br><em>You're nearly home.</em></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CLOSING — replaces the plain footer. Doubles as the site's enquiry
+     destination (the Collection section's ENQUIRE link already pointed
+     here). Own heading/copy; brand mark and social links carried over
+     from the old footer rather than duplicated. -->
+<footer class="closing" id="enquire">
+  <p class="closing-eyebrow">GET IN TOUCH</p>
+  <h2 class="closing-title">Ready when<br><em>you are.</em></h2>
+  <p class="closing-copy">A member of the Marlow team will follow up within one business day.</p>
+  <a href="#" class="closing-cta">ENQUIRE <b>&#8599;</b></a>
+
+  <div class="closing-footer">
+    <span class="brand-mark">ELARA RESIDENCE</span>
+    <span class="footer-copy">&copy; 2026 Marlow Properties. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#">INSTAGRAM</a>
+      <a href="#">LINKEDIN</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
